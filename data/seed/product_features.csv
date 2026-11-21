@@ -1,0 +1,11 @@
+feature_id,feature_name,feature_category
+1,Clinical charting,Clinical
+2,Billing,Financial
+3,Medication management,Clinical
+4,Scheduling,Operations
+5,Reporting,Analytics
+6,Compliance,Regulatory
+7,Pharmacy integrations,Integration
+8,API access,Integration
+9,Data export,Integration
+10,FHIR support,Integration

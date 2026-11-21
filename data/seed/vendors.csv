@@ -1,0 +1,11 @@
+vendor_id,vendor_name,website,headquarters,founded_year,description
+1,Epic Systems,https://www.epic.com,"Verona, Wisconsin, USA",1979,Enterprise EHR vendor serving large hospitals and health systems.
+2,Oracle Health,https://www.oracle.com/health/,"Austin, Texas, USA",1979,Enterprise EHR (formerly Cerner); acquired by Oracle in 2022.
+3,MEDITECH,https://ehr.meditech.com,"Westwood, Massachusetts, USA",1969,"EHR vendor for hospitals, ambulatory, and post-acute care."
+4,athenahealth,https://www.athenahealth.com,"Boston, Massachusetts, USA",1997,"Cloud-based EHR and revenue-cycle services, primarily ambulatory."
+5,August Health,https://www.august.health,"San Francisco, California, USA",2021,Senior living operating platform for assisted living and memory care.
+6,PointClickCare,https://pointclickcare.com,"Mississauga, Ontario, Canada",1995,Cloud platform for long-term and post-acute care and senior living.
+7,MatrixCare,https://www.matrixcare.com,"Bloomington, Minnesota, USA",1984,Post-acute and senior living EHR; a ResMed company.
+8,ECP,https://www.ecp123.com,"Milwaukee, Wisconsin, USA",2002,EHR and eMAR for assisted living and senior living communities.
+9,ALIS,https://alisonline.com,"Chicago, Illinois, USA",2005,Assisted living EHR by Medtelligent for senior living operators.
+10,Yardi,https://www.yardi.com,"Santa Barbara, California, USA",1984,Property management and senior living platform (Yardi Senior Living).

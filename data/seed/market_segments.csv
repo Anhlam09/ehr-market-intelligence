@@ -1,0 +1,7 @@
+segment_id,segment_name,description
+1,Acute care hospitals,Inpatient hospital care including emergency and surgical services.
+2,Ambulatory care,"Outpatient clinics, physician practices, and specialty offices."
+3,Assisted living,Residential care with support for activities of daily living.
+4,Memory care,Specialized residential care for dementia and Alzheimer's.
+5,Skilled nursing,Skilled nursing facilities providing medical/rehabilitative care.
+6,Long-term care,Extended custodial and medical care for chronic conditions.
