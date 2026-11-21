@@ -1,7 +1,10 @@
 metric_id,vendor_id,segment_id,metric_name,metric_value,metric_unit,measurement_year,source_id
 1,1,1,acute_care_ehr_market_share,39.1,percent,2023,11
-2,2,1,acute_care_ehr_market_share,21.8,percent,2023,11
-3,3,1,acute_care_ehr_market_share,13.9,percent,2023,11
+2,2,1,acute_care_ehr_market_share,23.4,percent,2023,11
+3,3,1,acute_care_ehr_market_share,16.0,percent,2023,11
+8,1,1,acute_care_bed_share,51.5,percent,2023,11
+9,2,1,acute_care_bed_share,23.8,percent,2023,11
+10,3,1,acute_care_bed_share,13.0,percent,2023,11
 4,4,2,ambulatory_customer_providers,160000,providers,2023,4
 5,6,6,reported_customer_facilities,27000,facilities,2024,6
 6,7,6,reported_customer_facilities,15000,facilities,2024,7

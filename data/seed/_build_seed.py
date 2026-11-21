@@ -23,13 +23,13 @@ SOURCES = [
     (2,  "Oracle Health - company website",       "https://www.oracle.com/health/",                   "2024-06-01", "2025-01-15", "vendor_website"),
     (3,  "MEDITECH - company website",            "https://ehr.meditech.com/about-meditech",          "2024-01-01", "2025-01-15", "vendor_website"),
     (4,  "athenahealth - company website",        "https://www.athenahealth.com/about",               "2024-01-01", "2025-01-15", "vendor_website"),
-    (5,  "August Health - company website",       "https://www.august.health/",                       "2024-09-01", "2025-01-15", "vendor_website"),
+    (5,  "August Health - company website",       "https://www.augusthealth.com/",                    "2024-09-01", "2025-01-15", "vendor_website"),
     (6,  "PointClickCare - company website",      "https://pointclickcare.com/about/",                "2024-01-01", "2025-01-15", "vendor_website"),
     (7,  "MatrixCare - company website",          "https://www.matrixcare.com/about-us/",             "2024-01-01", "2025-01-15", "vendor_website"),
     (8,  "ECP - company website",                 "https://www.ecp123.com/about",                     "2024-01-01", "2025-01-15", "vendor_website"),
     (9,  "ALIS by Medtelligent - website",        "https://alisonline.com/about/",                    "2024-01-01", "2025-01-15", "vendor_website"),
     (10, "Yardi Senior Living - website",         "https://www.yardi.com/products/senior-living/",    "2024-01-01", "2025-01-15", "vendor_website"),
-    (11, "KLAS US Acute Care EHR Market Share",   "https://klasresearch.com/report/us-hospital-ehr-market-share-2024/", "2024-04-01", "2025-01-15", "industry_research"),
+    (11, "KLAS US Acute Care EHR Market Share 2023 (Becker's Hospital Review)", "https://www.beckershospitalreview.com/healthcare-information-technology/ehrs/epic-increases-hospital-market-share-lead/", "2024-05-20", "2025-01-15", "industry_research"),
     (12, "ONC/ASTP Health IT Dashboard",          "https://www.healthit.gov/data/",                   "2023-12-01", "2025-01-15", "government_dataset"),
     (13, "CMS Provider of Services / Nursing Homes", "https://data.cms.gov/provider-data/",           "2024-01-01", "2025-01-15", "government_dataset"),
     (14, "Epic FHIR / API documentation",         "https://fhir.epic.com/",                           "2024-01-01", "2025-01-15", "api_documentation"),
@@ -44,7 +44,7 @@ VENDORS = [
     (2,  "Oracle Health",  "https://www.oracle.com/health/",  "Austin, Texas, USA",                1979, "Enterprise EHR (formerly Cerner); acquired by Oracle in 2022."),
     (3,  "MEDITECH",       "https://ehr.meditech.com",        "Westwood, Massachusetts, USA",      1969, "EHR vendor for hospitals, ambulatory, and post-acute care."),
     (4,  "athenahealth",   "https://www.athenahealth.com",    "Boston, Massachusetts, USA",        1997, "Cloud-based EHR and revenue-cycle services, primarily ambulatory."),
-    (5,  "August Health",  "https://www.august.health",       "San Francisco, California, USA",     2021, "Senior living operating platform for assisted living and memory care."),
+    (5,  "August Health",  "https://www.augusthealth.com",    "San Francisco, California, USA",     2020, "Senior living operating platform for assisted living and memory care."),
     (6,  "PointClickCare", "https://pointclickcare.com",      "Mississauga, Ontario, Canada",      1995, "Cloud platform for long-term and post-acute care and senior living."),
     (7,  "MatrixCare",     "https://www.matrixcare.com",      "Bloomington, Minnesota, USA",       1984, "Post-acute and senior living EHR; a ResMed company."),
     (8,  "ECP",            "https://www.ecp123.com",          "Milwaukee, Wisconsin, USA",         2002, "EHR and eMAR for assisted living and senior living communities."),
@@ -142,8 +142,12 @@ for v, _, _, _, _, _ in VENDORS:
 MARKET_METRICS = [
     # Acute care hospital EHR market share (as reported by KLAS, illustrative)
     (1, 1, 1, "acute_care_ehr_market_share", 39.1, "percent",   2023, 11),
-    (2, 2, 1, "acute_care_ehr_market_share", 21.8, "percent",   2023, 11),
-    (3, 3, 1, "acute_care_ehr_market_share", 13.9, "percent",   2023, 11),
+    (2, 2, 1, "acute_care_ehr_market_share", 23.4, "percent",   2023, 11),
+    (3, 3, 1, "acute_care_ehr_market_share", 16.0, "percent",   2023, 11),
+    # Acute-care hospital BED share (different measure than hospital-count share)
+    (8, 1, 1, "acute_care_bed_share",        51.5, "percent",   2023, 11),
+    (9, 2, 1, "acute_care_bed_share",        23.8, "percent",   2023, 11),
+    (10, 3, 1, "acute_care_bed_share",       13.0, "percent",   2023, 11),
     # Ambulatory presence (reported, directional)
     (4, 4, 2, "ambulatory_customer_providers", 160000, "providers", 2023, 4),
     # Senior living / LTPAC reported footprint (self-reported vendor counts)

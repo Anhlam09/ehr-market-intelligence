@@ -3,13 +3,13 @@ source_id,source_name,source_url,publication_date,retrieval_date,source_type
 2,Oracle Health - company website,https://www.oracle.com/health/,2024-06-01,2025-01-15,vendor_website
 3,MEDITECH - company website,https://ehr.meditech.com/about-meditech,2024-01-01,2025-01-15,vendor_website
 4,athenahealth - company website,https://www.athenahealth.com/about,2024-01-01,2025-01-15,vendor_website
-5,August Health - company website,https://www.august.health/,2024-09-01,2025-01-15,vendor_website
+5,August Health - company website,https://www.augusthealth.com/,2024-09-01,2025-01-15,vendor_website
 6,PointClickCare - company website,https://pointclickcare.com/about/,2024-01-01,2025-01-15,vendor_website
 7,MatrixCare - company website,https://www.matrixcare.com/about-us/,2024-01-01,2025-01-15,vendor_website
 8,ECP - company website,https://www.ecp123.com/about,2024-01-01,2025-01-15,vendor_website
 9,ALIS by Medtelligent - website,https://alisonline.com/about/,2024-01-01,2025-01-15,vendor_website
 10,Yardi Senior Living - website,https://www.yardi.com/products/senior-living/,2024-01-01,2025-01-15,vendor_website
-11,KLAS US Acute Care EHR Market Share,https://klasresearch.com/report/us-hospital-ehr-market-share-2024/,2024-04-01,2025-01-15,industry_research
+11,KLAS US Acute Care EHR Market Share 2023 (Becker's Hospital Review),https://www.beckershospitalreview.com/healthcare-information-technology/ehrs/epic-increases-hospital-market-share-lead/,2024-05-20,2025-01-15,industry_research
 12,ONC/ASTP Health IT Dashboard,https://www.healthit.gov/data/,2023-12-01,2025-01-15,government_dataset
 13,CMS Provider of Services / Nursing Homes,https://data.cms.gov/provider-data/,2024-01-01,2025-01-15,government_dataset
 14,Epic FHIR / API documentation,https://fhir.epic.com/,2024-01-01,2025-01-15,api_documentation

@@ -8,6 +8,20 @@ vendors across healthcare markets — with a focused competitive analysis of
 The data engineering (ETL pipeline, PostgreSQL schema, validation, data-quality
 monitoring) is the foundation; the EHR competitive analysis is the application.
 
+## Dashboard preview
+
+**Competitive Intelligence** — side-by-side feature comparison, segment overlap, and the transparent similarity score:
+
+![Competitive Intelligence page](docs/images/02_competitive_intelligence.png)
+
+**EHR Market Overview** — vendor coverage, hospital market share, and senior-living footprint (kept separate by design):
+
+![Market Overview page](docs/images/01_market_overview.png)
+
+**Data Engineering Monitor** — pipeline runs, source freshness, evidence coverage, and traceability gaps:
+
+![Data Engineering Monitor page](docs/images/03_data_engineering_monitor.png)
+
 ---
 
 ## What this demonstrates
