@@ -8,6 +8,36 @@ vendors across healthcare markets — with a focused competitive analysis of
 The data engineering (ETL pipeline, PostgreSQL schema, validation, data-quality
 monitoring) is the foundation; the EHR competitive analysis is the application.
 
+## Key findings
+
+1. **The hospital EHR market is highly concentrated.** Epic (39.1%), Oracle Health
+   (23.4%), and MEDITECH (16.0%) together hold ~78.5% of U.S. acute-care hospitals
+   (KLAS, 2023). Epic alone covers **51.5% of acute-care hospital beds** — more
+   than its next two competitors combined.
+
+2. **August Health's closest competitors are senior-living vendors, not Epic.**
+   The evidence-based overlap model ranks **ECP, ALIS, and Yardi as "High overlap"**
+   with August Health, while **Epic and Oracle Health score "Low overlap" (32.5/100)**.
+   This is reached from the data — not assumed — and confirms the two markets are distinct.
+
+3. **Epic vs August Health is a cross-market comparison, not direct competition.**
+   Both confirm core clinical capabilities (charting, medication management,
+   scheduling, reporting), but they serve **non-overlapping customer segments**
+   (acute/ambulatory vs. assisted living/memory care), which is why the segment
+   similarity is 0 and the overall score is low.
+
+4. **Hospital share and senior-living footprint are not comparable** — and the
+   platform keeps them apart by design. PointClickCare reports **27,000+ LTPAC
+   facilities** (self-reported); that is a *count*, not a percentage market share,
+   and cannot be placed on the same axis as Epic's 39.1% hospital share.
+
+5. **Data integrity is visible, not hidden.** Where a figure could not be verified
+   (e.g. a specific MatrixCare facility count), the value is stored as **unknown /
+   NULL rather than invented**, and ~27% of vendor–feature statuses are `unknown`
+   (no public evidence found) rather than falsely marked absent.
+
+---
+
 ## Dashboard preview
 
 **Competitive Intelligence** — side-by-side feature comparison, segment overlap, and the transparent similarity score:

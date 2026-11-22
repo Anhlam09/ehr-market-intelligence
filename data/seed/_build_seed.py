@@ -24,7 +24,7 @@ SOURCES = [
     (3,  "MEDITECH - company website",            "https://ehr.meditech.com/about-meditech",          "2024-01-01", "2025-01-15", "vendor_website"),
     (4,  "athenahealth - company website",        "https://www.athenahealth.com/about",               "2024-01-01", "2025-01-15", "vendor_website"),
     (5,  "August Health - company website",       "https://www.augusthealth.com/",                    "2024-09-01", "2025-01-15", "vendor_website"),
-    (6,  "PointClickCare - company website",      "https://pointclickcare.com/about/",                "2024-01-01", "2025-01-15", "vendor_website"),
+    (6,  "PointClickCare - Our Growth blog (CEO)",  "https://pointclickcare.com/blog/leader-perspectives/our-growth-and-unified-brand-vision/", "2023-01-01", "2025-01-15", "vendor_website"),
     (7,  "MatrixCare - company website",          "https://www.matrixcare.com/about-us/",             "2024-01-01", "2025-01-15", "vendor_website"),
     (8,  "ECP - company website",                 "https://www.ecp123.com/about",                     "2024-01-01", "2025-01-15", "vendor_website"),
     (9,  "ALIS by Medtelligent - website",        "https://alisonline.com/about/",                    "2024-01-01", "2025-01-15", "vendor_website"),
@@ -151,8 +151,10 @@ MARKET_METRICS = [
     # Ambulatory presence (reported, directional)
     (4, 4, 2, "ambulatory_customer_providers", 160000, "providers", 2023, 4),
     # Senior living / LTPAC reported footprint (self-reported vendor counts)
-    (5, 6, 6, "reported_customer_facilities", 27000, "facilities", 2024, 6),
-    (6, 7, 6, "reported_customer_facilities", 15000, "facilities", 2024, 7),
+    (5, 6, 6, "reported_customer_facilities", 27000, "facilities", 2023, 6),
+    # MatrixCare publishes only "thousands of ... organizations" — no specific
+    # count verified, so value is left NULL rather than invented.
+    (6, 7, 6, "reported_customer_facilities", None, "facilities", 2024, 7),
     # August Health reported community footprint (self-reported)
     (7, 5, 3, "reported_customer_communities", None, "communities", 2024, 5),
 ]
