@@ -118,7 +118,13 @@ cleans vendor data, validates it, and loads it into a normalized PostgreSQL
 database with constraints and idempotent upserts. SQL queries analyze market
 concentration and a transparent, weighted competitor-overlap model, and a
 three-page Streamlit dashboard visualizes it with full source traceability. The
-interesting result: August Health's real competitors are senior-living vendors,
-not Epic — and I reached that from evidence, not assumption. The part I care most
-about is data integrity: unverifiable numbers are stored as NULL, and 'unknown'
-is never treated as 'absent.'"
+interesting result: under my transparent similarity model, August Health scores
+most similar to other senior-living software and least similar to enterprise-
+hospital vendors like Epic — an illustrative model output on public data, not a
+definitive verdict. The part I care most about is data integrity: unverifiable
+numbers are stored as NULL, and 'unknown' is never treated as 'absent.'"
+
+> Note: everything here is framed as the output of a disclosed model on public,
+> as-reported data — not as statements of fact about any company — and the repo
+> carries a full disclaimer and trademark notice. (I'm not a lawyer; this is
+> standard defensive framing, not legal advice.)

@@ -1,12 +1,27 @@
 # EHR Market Intelligence & Competitive Analysis Platform
 
 An end-to-end data engineering and analytics platform that collects, cleans,
-validates, stores, and analyzes information about Electronic Health Record (EHR)
-vendors across healthcare markets — with a focused competitive analysis of
-**August Health** and its senior-living competitors.
+validates, stores, and analyzes **publicly reported** information about Electronic
+Health Record (EHR) vendors across healthcare markets — including an illustrative
+similarity analysis of **August Health** relative to other senior-living software.
 
 The data engineering (ETL pipeline, PostgreSQL schema, validation, data-quality
-monitoring) is the foundation; the EHR competitive analysis is the application.
+monitoring) is the foundation; the EHR analysis is the application.
+
+> **Disclaimer / independent project.** This is an independent, educational
+> portfolio project. It is **not affiliated with, authorized, endorsed by, or
+> sponsored by** Epic, Oracle Health, MEDITECH, athenahealth, August Health,
+> PointClickCare, MatrixCare, ECP, ALIS, Yardi, KLAS Research, or any other
+> organization named here. All company and product names are the trademarks of
+> their respective owners and are used for identification and commentary only.
+> Figures are presented **as reported by the cited public sources** and may be
+> incomplete, approximate, or out of date; they are not independently audited.
+> The "similarity" and "overlap" scores are the output of a simple, transparent
+> formula defined by this project — they are the author's analytical opinion for
+> demonstration purposes, **not statements of fact** about any company's market
+> position or competitive standing. See [Disclaimer](#disclaimer) for the full text.
+> Nothing here is legal, financial, or professional advice. Figures should be
+> re-verified against the original sources before any external use.)
 
 ## Key findings
 
@@ -15,16 +30,19 @@ monitoring) is the foundation; the EHR competitive analysis is the application.
    (KLAS, 2023). Epic alone covers **51.5% of acute-care hospital beds** — more
    than its next two competitors combined.
 
-2. **August Health's closest competitors are senior-living vendors, not Epic.**
-   The evidence-based overlap model ranks **ECP, ALIS, and Yardi as "High overlap"**
-   with August Health, while **Epic and Oracle Health score "Low overlap" (32.5/100)**.
-   This is reached from the data — not assumed — and confirms the two markets are distinct.
+2. **Under this project's similarity model, August Health scores most similar to
+   other senior-living software.** On the limited public data collected here, the
+   model's highest similarity scores for August Health are with senior-living
+   vendors (e.g. ECP, ALIS, Yardi), and lower scores with enterprise-hospital
+   vendors (e.g. Epic, Oracle Health). These are illustrative model outputs on
+   partial data (evidence coverage ~50%), not a definitive competitive ranking.
 
-3. **Epic vs August Health is a cross-market comparison, not direct competition.**
-   Both confirm core clinical capabilities (charting, medication management,
-   scheduling, reporting), but they serve **non-overlapping customer segments**
-   (acute/ambulatory vs. assisted living/memory care), which is why the segment
-   similarity is 0 and the overall score is low.
+3. **The model treats hospital and senior-living software as largely separate
+   categories.** In the collected data, enterprise-hospital vendors and
+   senior-living vendors serve mostly different customer segments
+   (acute/ambulatory vs. assisted living / memory care), which is the main reason
+   their similarity scores to August Health are low. This reflects the segments
+   recorded in the dataset, not a judgment about any company's products.
 
 4. **Hospital share and senior-living footprint are not comparable** — and the
    platform keeps them apart by design. PointClickCare reports **27,000+ LTPAC
@@ -219,3 +237,37 @@ ehr-market-intelligence/
 ├── .github/workflows/ci.yml     # pipeline + tests on PostgreSQL service
 ├── requirements.txt · .env.example · .gitignore
 ```
+
+---
+
+## Disclaimer
+
+This repository is an **independent, educational portfolio project** created to
+demonstrate data-engineering and analytics skills. It is **not affiliated with,
+authorized by, endorsed by, sponsored by, or connected to** Epic Systems, Oracle
+Health, MEDITECH, athenahealth, August Health, PointClickCare, MatrixCare, ECP,
+ALIS, Yardi, KLAS Research, or any other company or organization referenced here.
+
+- **Trademarks.** All company names, product names, and logos are the property of
+  their respective owners. They are used here solely for identification,
+  commentary, comparison, and educational purposes (nominative fair use). No
+  trademark ownership or endorsement is claimed or implied.
+- **Data accuracy.** All figures are presented **as reported by the cited public
+  sources** (and clearly labeled where self-reported or unverified). The author
+  has not independently audited them. Data may be incomplete, approximate,
+  outdated, or incorrect. Figures should be re-verified against the original
+  source before any external or commercial use.
+- **Similarity / overlap scores are opinion, not fact.** They are the output of a
+  simple, fully disclosed formula defined by this project, computed on limited
+  data. They represent the author's analytical interpretation for demonstration
+  and **are not statements of fact** about any company's products, quality,
+  market share, or competitive position, and should not be relied upon for any
+  business, investment, procurement, or other decision.
+- **No advice.** Nothing in this repository constitutes legal, financial,
+  medical, investment, or professional advice.
+- **Corrections.** If you represent a company named here and believe any
+  information is inaccurate or should be updated or removed, please open an issue
+  and the author will review it promptly.
+
+This project is provided "as is," without warranty of any kind. The author
+accepts no liability for any use of, or reliance on, the information herein.
