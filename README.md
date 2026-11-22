@@ -166,6 +166,32 @@ rank **low overlap** — a different market, reached by evidence rather than ass
 
 ---
 
+## Data sources & confidence
+
+Every headline figure below is tagged with its source and a confidence level, so
+reviewers can see exactly how much to trust each number. Confidence legend:
+**High** = independent industry research or multiple sources ·
+**Medium** = single self-reported vendor source ·
+**Unverified** = stored as NULL, no figure claimed.
+
+| Figure | Value | Source | Type | Confidence |
+|---|---|---|---|---|
+| Epic acute-care hospital share (2023) | 39.1% | KLAS 2023 (Becker's / Healthcare Dive) | Industry research | **High** |
+| Oracle Health acute-care hospital share (2023) | 23.4% | KLAS 2023 (Becker's) | Industry research | **High** |
+| MEDITECH acute-care hospital share (2023) | 16.0% | KLAS 2023 (Becker's / Healthcare Dive) | Industry research | **High** |
+| Epic / Oracle / MEDITECH bed share (2023) | 51.5% / 23.8% / 13.0% | KLAS 2023 (Healthcare Dive) | Industry research | **High** |
+| August Health — founded / HQ | 2020 / San Francisco | Crunchbase, LinkedIn, official site | Multiple | **High** |
+| PointClickCare — LTPAC facilities | 27,000+ | PointClickCare CEO growth blog | Self-reported vendor | **Medium** |
+| athenahealth — clinicians on network | 160,000 | athenahealth | Self-reported vendor | **Medium** |
+| MatrixCare — facility count | *(NULL)* | Site states only "thousands" — no number | Not verified | **Unverified** |
+| August Health — community count | *(NULL)* | No public figure found | Not verified | **Unverified** |
+| Vendor segments & feature availability | per-row | Vendor websites | Self-reported vendor | **Medium** (27% left `unknown`) |
+
+> How I verified these and the judgment calls behind them (e.g. why MatrixCare is
+> NULL) are documented in [`docs/PROJECT_JOURNEY.md`](docs/PROJECT_JOURNEY.md).
+
+---
+
 ## Methodology & limitations (read before citing figures)
 
 - **Do not compare hospital market share with senior-living counts.** They use
