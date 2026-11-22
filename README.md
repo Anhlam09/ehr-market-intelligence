@@ -148,6 +148,40 @@ guarantee no duplicated rows.
 
 ---
 
+## dbt analytics layer (optional)
+
+On top of the Python ETL, a small **dbt** project builds clean staging views and
+analytics marts directly in PostgreSQL. This demonstrates a modern stack:
+**ETL in Python, in-warehouse transformations in dbt.**
+
+```
+dbt/
+├── dbt_project.yml · profiles.yml
+├── models/staging/   # stg_vendors, stg_vendor_segments, stg_vendor_features, stg_market_metrics (views)
+├── models/marts/     # vendor_market_coverage, competitor_overlap (tables)
+└── tests/            # singular test: overlap_score in 0..100
+```
+
+- **Staging models** — typed, trimmed, normalized views over the raw tables.
+- **Mart `vendor_market_coverage`** — segments served per vendor.
+- **Mart `competitor_overlap`** — the weighted similarity model re-implemented in
+  pure SQL; its output matches `src/analyze_competitors.py` exactly (two
+  independent implementations agreeing = a correctness check).
+- **Tests** — `not_null`, `unique`, `relationships`, `accepted_values`, plus a
+  custom range test (22 tests total).
+
+dbt does not yet build on Python 3.14, so run it in its own 3.9–3.12 venv:
+
+```bash
+python3.12 -m venv .dbt-venv
+./.dbt-venv/bin/pip install -r requirements-dbt.txt
+set -a; source .env; set +a                                   # export PG* vars
+./.dbt-venv/bin/dbt run  --profiles-dir dbt --project-dir dbt  # build models
+./.dbt-venv/bin/dbt test --profiles-dir dbt --project-dir dbt  # run tests
+```
+
+---
+
 ## The competitor overlap model
 
 A **transparent, weighted, evidence-based** score (0–100) between a focus vendor
@@ -232,10 +266,11 @@ ehr-market-intelligence/
 ├── data/{raw,processed,seed}/   # raw snapshots, cleaned CSVs, curated seed
 ├── src/                         # common, collect, clean, validate, load, run_pipeline, analyze_competitors
 ├── sql/                         # create_tables, market_analysis, competitor_analysis, data_quality
+├── dbt/                         # dbt analytics layer: staging views + marts + tests
 ├── dashboard/app.py             # 3-page Streamlit app
 ├── tests/test_data_quality.py   # pytest invariants + idempotency
 ├── .github/workflows/ci.yml     # pipeline + tests on PostgreSQL service
-├── requirements.txt · .env.example · .gitignore
+├── requirements.txt · requirements-dbt.txt · .env.example · .gitignore
 ```
 
 ---

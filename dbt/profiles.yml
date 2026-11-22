@@ -1,0 +1,14 @@
+# dbt connection profile. Reads the same environment variables as the Python
+# pipeline (see .env). Run dbt with:  dbt run --profiles-dir dbt
+ehr_market:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('PGHOST', 'localhost') }}"
+      port: "{{ env_var('PGPORT', '5432') | int }}"
+      user: "{{ env_var('PGUSER', 'postgres') }}"
+      password: "{{ env_var('PGPASSWORD', '') }}"
+      dbname: "{{ env_var('PGDATABASE', 'ehr_market') }}"
+      schema: public
+      threads: 4

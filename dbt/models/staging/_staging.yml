@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_vendors
+    description: "Cleaned vendor profiles."
+    columns:
+      - name: vendor_id
+        description: "Primary key."
+        tests: [not_null, unique]
+      - name: vendor_name
+        tests: [not_null]
+
+  - name: stg_vendor_segments
+    description: "Vendor-to-segment relationships (which markets each vendor serves)."
+    columns:
+      - name: vendor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_vendors')
+              field: vendor_id
+      - name: market_role
+        tests:
+          - accepted_values:
+              values: ["primary", "secondary"]
+
+  - name: stg_vendor_features
+    description: "Vendor-to-feature availability (evidence-based)."
+    columns:
+      - name: vendor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_vendors')
+              field: vendor_id
+      - name: availability_status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["confirmed", "absent", "unknown"]
+
+  - name: stg_market_metrics
+    description: "Market-share / footprint observations."
+    columns:
+      - name: metric_id
+        tests: [not_null, unique]
+      - name: vendor_id
+        tests:
+          - relationships:
+              to: ref('stg_vendors')
+              field: vendor_id

@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: ehr_raw
+    description: "Raw tables loaded into PostgreSQL by the Python ETL pipeline."
+    schema: public
+    tables:
+      - name: vendors
+      - name: market_segments
+      - name: product_features
+      - name: vendor_segments
+      - name: vendor_features
+      - name: market_metrics
+      - name: sources

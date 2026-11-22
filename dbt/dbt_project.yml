@@ -1,0 +1,27 @@
+name: ehr_market
+version: "1.0.0"
+config-version: 2
+
+# Analytics transformation layer that sits on top of the Python ETL.
+# The Python pipeline loads raw tables into PostgreSQL; dbt builds clean
+# staging views and analytics marts from them.
+
+profile: ehr_market
+
+model-paths: ["models"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  ehr_market:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
+
+# Overlap model's focus vendor (overridable: dbt run --vars 'focus_vendor: Epic Systems')
+vars:
+  focus_vendor: "August Health"

@@ -1,0 +1,7 @@
+# dbt analytics layer (optional). Install in a SEPARATE Python 3.9-3.12 venv —
+# dbt does not yet build on Python 3.14, which the main pipeline uses.
+#
+#   python3.12 -m venv .dbt-venv
+#   ./.dbt-venv/bin/pip install -r requirements-dbt.txt
+#
+dbt-postgres>=1.8

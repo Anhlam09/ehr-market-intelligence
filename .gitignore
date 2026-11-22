@@ -2,9 +2,16 @@
 __pycache__/
 *.py[cod]
 .venv/
+.dbt-venv/
 venv/
 *.egg-info/
 .pytest_cache/
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+logs/dbt.log
 
 # Environment / secrets
 .env
@@ -23,3 +30,4 @@ logs/*
 .DS_Store
 .idea/
 .vscode/
+dbt/.user.yml

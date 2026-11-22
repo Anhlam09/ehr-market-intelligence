@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: vendor_market_coverage
+    description: "Per-vendor count and list of healthcare segments served."
+    columns:
+      - name: vendor_id
+        tests: [not_null, unique]
+      - name: vendor_name
+        tests: [not_null]
+      - name: segments_served
+        tests: [not_null]
+
+  - name: competitor_overlap
+    description: >
+      Transparent weighted similarity score (0-100) between a focus vendor and
+      every other vendor. Model output / analytical opinion, not a statement of
+      fact (see repository disclaimer).
+    columns:
+      - name: competitor
+        tests: [not_null, unique]
+      - name: overlap_score
+        tests: [not_null]
+      - name: classification
+        tests:
+          - accepted_values:
+              values:
+                ["High overlap", "Moderate overlap", "Low overlap", "Insufficient evidence"]
